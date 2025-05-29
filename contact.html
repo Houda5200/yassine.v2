@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Houda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top-nav">
+  <a href="index.html" class="site-name">Houda</a>
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="#" class="search-icon">🔍</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </nav>
+</header>
+<div class="search-bar-top" id="searchBarTop">
+  <input type="text" placeholder="Search this site...">
+  <span class="close-search" id="closeSearch">✖</span>
+</div>
+
+
+<main class="contact-page">
+  <h1 class="page-title">Contact</h1>
+  <form>
+    <input type="text" class="field" placeholder="Name*" required>
+    <input type="email" class="field" placeholder="Email*" required>
+    <input type="text" class="field" placeholder="Subject" required>
+    <textarea class="field" placeholder="Your message..." required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
