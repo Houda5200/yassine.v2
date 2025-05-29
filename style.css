@@ -76,15 +76,17 @@ body {
   height: 60px;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
   z-index: 1500;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .search-bar-top.active {
-  display: flex;
   transform: translateY(0);
   opacity: 1;
 }
@@ -97,30 +99,29 @@ body {
   border-radius: 4px;
   font-size: 16px;
 }
-.search-bar-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  z-index: 1500;
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
 
 .close-search {
   margin-left: 10px;
   font-size: 22px;
   cursor: pointer;
 }
+
+/* ===== Profile Photo (always visible) ===== */
+.profile-photo {
+  display: flex;
+  justify-content: flex-end;  /* colle à droite */
+  margin: 0;                 /* enlève marges */
+  padding: 0;                /* enlève padding */
+}
+
+.profile-photo img {
+  width: 200px;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+  margin: 0;                 /* enlève marges autour */
+}
+
 
 /* ===== Page Content ===== */
 .homepage,
@@ -162,6 +163,7 @@ form {
   background-color: #003366;
 }
 
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -185,5 +187,11 @@ form {
 
   .nav-links li::before {
     content: '';
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-page {
+    padding: 20px 10px;
   }
 }
